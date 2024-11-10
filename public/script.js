@@ -3,7 +3,7 @@
 function comprarCartao(valor) {
     // Armazena o valor do cartão e redireciona para a página de pagamento
     localStorage.setItem("valorCartao", valor);
-    window.location.href = "pagamento.html";
+    window.location.href = "confirmation.html";
 }
 
 // Função para copiar a chave Pix
