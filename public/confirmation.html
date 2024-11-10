@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagar com Pix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Pagar com Pix</h1>
+        <p>Por favor, siga as instruções abaixo para concluir sua compra.</p>
+    </header>
+    
+    <section class="payment-info">
+        <h2>Detalhes do Pagamento</h2>
+        <p>Valor a Pagar: R$ <span id="valor-cartao"></span></p>
+        <p>Chave Pix: <strong id="pix-key">0cfbde45-69d8-4ba8-8c18-8cbe74f9d39f</strong>
+        <button onclick="copiarChavePix()">Copiar</button></p>
+
+        <div class="instructions">
+            <h3>Instruções</h3>
+            <ol>
+                <li>Abra seu aplicativo bancário.</li>
+                <li>Selecione a opção de pagamento via Pix.</li>
+                <li>Insira a chave Pix acima.</li>
+                <li>Confirme o valor a ser pago.</li>
+                <li>Finalize o pagamento e volte para a página inicial.</li>
+            </ol>
+        </div>
+
+        <div class="thank-you">
+            <h3>Obrigado por sua compra!</h3>
+            <p>Se tiver dúvidas, entre em contato conosco.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Se você tiver qualquer dúvida, entre em contato.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
