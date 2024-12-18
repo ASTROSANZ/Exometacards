@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Cartão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Detalhes do Cartão</h1>
+    </header>
+
+    <div class="card-detail">
+        <img id="cartaoImagem" src="" alt="Imagem do Cartão">
+        <div class="info">
+            <h2 id="nomeCartao"></h2>
+            <p><strong>Limite:</strong> R$<span id="limiteCartao"></span></p>
+            <p><strong>Valor:</strong> R$<span id="valorCartao"></span></p>
+            <p id="descricaoCartao">Aqui pode ter uma descrição mais detalhada sobre o cartão, seus benefícios, etc.</p>
+            <button id="comprarBtn">Comprar</button>
+        </div>
+    </div>
+
+    <script>
+        // Captura os parâmetros da URL
+        const params = new URLSearchParams(window.location.search);
+        const nome = params.get("nome");
+        const limite = params.get("limite");
+        const valor = params.get("valor");
+
+        // Preenche as informações na página
+        document.getElementById("nomeCartao").innerText = nome;
+        document.getElementById("limiteCartao").innerText = limite;
+        document.getElementById("valorCartao").innerText = valor;
+        document.getElementById("cartaoImagem").src = "imagens/" + nome.toLowerCase().replace(/\s+/g, '') + ".png"; // Altera a imagem baseada no nome do cartão
+
+        // Adiciona evento ao botão de compra
+        document.getElementById("comprarBtn").addEventListener("click", function() {
+            alert("Compra realizada com sucesso!"); // Aqui você pode adicionar a lógica para finalizar a compra
+        });
+    </script>
+
+</body>
+</html>
