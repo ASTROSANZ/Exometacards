@@ -5,16 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venda de Cartões de Crédito</title>
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK5JZRFC35"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-NK5JZRFC35');
-    </script>
 </head>
 <body>
     <header>
@@ -29,7 +19,9 @@
             <h3>Cartão MasterCard Platinum</h3>
             <p>Limite: R$10.000</p>
             <p>Valor: R$80</p>
-            <button onclick="comprarCartao(80)">Comprar</button>
+            <a href="detalhes.html?nome=MasterCard%20Platinum&limite=10000&valor=80">
+                <button>Comprar</button>
+            </a>
         </div>
 
         <!-- Cartão 2 -->
@@ -38,7 +30,9 @@
             <h3>Cartão Visa Gold</h3>
             <p>Limite: R$8.000</p>
             <p>Valor: R$60</p>
-            <button onclick="comprarCartao(60)">Comprar</button>
+            <a href="detalhes.html?nome=Visa%20Gold&limite=8000&valor=60">
+                <button>Comprar</button>
+            </a>
         </div>
 
         <!-- Cartão 3 -->
@@ -47,7 +41,9 @@
             <h3>Cartão Maestro Silver</h3>
             <p>Limite: R$5.000</p>
             <p>Valor: R$35</p>
-            <button onclick="comprarCartao(35)">Comprar</button>
+            <a href="detalhes.html?nome=Maestro%20Silver&limite=5000&valor=35">
+                <button>Comprar</button>
+            </a>
         </div>
 
         <!-- Cartão 4 -->
@@ -56,7 +52,9 @@
             <h3>Cartão MasterCard Classic</h3>
             <p>Limite: R$3.000</p>
             <p>Valor: R$35</p>
-            <button onclick="comprarCartao(35)">Comprar</button>
+            <a href="detalhes.html?nome=MasterCard%20Classic&limite=3000&valor=35">
+                <button>Comprar</button>
+            </a>
         </div>
 
         <!-- Cartão 5 -->
@@ -65,7 +63,9 @@
             <h3>Cartão Union Black</h3>
             <p>Limite: R$15.000</p>
             <p>Valor: R$150</p>
-            <button onclick="comprarCartao(150)">Comprar</button>
+            <a href="detalhes.html?nome=Union%20Black&limite=15000&valor=150">
+                <button>Comprar</button>
+            </a>
         </div>
 
         <!-- Cartão 6 -->
@@ -74,7 +74,9 @@
             <h3>Cartão Visa Electron</h3>
             <p>Limite: R$4.000</p>
             <p>Valor: R$45</p>
-            <button onclick="comprarCartao(45)">Comprar</button>
+            <a href="detalhes.html?nome=Visa%20Electron&limite=4000&valor=45">
+                <button>Comprar</button>
+            </a>
         </div>
 
         <!-- Cartão 7 -->
@@ -83,7 +85,9 @@
             <h3>Cartão Hipercard</h3>
             <p>Limite: R$6.000</p>
             <p>Valor: R$80</p>
-            <button onclick="comprarCartao(80)">Comprar</button>
+            <a href="detalhes.html?nome=Hipercard&limite=6000&valor=80">
+                <button>Comprar</button>
+            </a>
         </div>
 
         <!-- Cartão 8 -->
@@ -92,7 +96,9 @@
             <h3>Cartão MasterCard Platinum</h3>
             <p>Limite: R$9.000</p>
             <p>Valor: R$140</p>
-            <button onclick="comprarCartao(140)">Comprar</button>
+            <a href="detalhes.html?nome=MasterCard%20Platinum%202&limite=9000&valor=140">
+                <button>Comprar</button>
+            </a>
         </div>
 
         <!-- Cartão 9 -->
@@ -101,10 +107,11 @@
             <h3>Cartão Elo Diamond</h3>
             <p>Limite: R$12.000</p>
             <p>Valor: R$190</p>
-            <button onclick="comprarCartao(190)">Comprar</button>
+            <a href="detalhes.html?nome=Elo%20Diamond&limite=12000&valor=190">
+                <button>Comprar</button>
+            </a>
         </div>
     </div>
 
-    <script src="script.js"></script>
 </body>
 </html>
