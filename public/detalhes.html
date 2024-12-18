@@ -13,7 +13,9 @@
     </header>
 
     <div class="card-detail">
-        <img id="cartaoImagem" src="" alt="Imagem do Cartão">
+        <!-- Imagem do cartão (será carregada dinamicamente) -->
+        <img id="cartaoImagem" src="" alt="Imagem do Cartão" />
+        
         <div class="info">
             <h2 id="nomeCartao"></h2>
             <p><strong>Limite:</strong> R$<span id="limiteCartao"></span></p>
@@ -37,7 +39,8 @@
         document.getElementById("valorCartao").innerText = valor;
 
         // Define a imagem baseada no ID do cartão
-        document.getElementById("cartaoImagem").src = `imagens/cartao${id}.png`;  // Carrega a imagem dinamicamente
+        const cartaoImagem = document.getElementById("cartaoImagem");
+        cartaoImagem.src = `imagens/cartao${id}.png`;  // Carrega a imagem dinamicamente
 
         // Adiciona evento ao botão de compra
         document.getElementById("comprarBtn").addEventListener("click", function() {
