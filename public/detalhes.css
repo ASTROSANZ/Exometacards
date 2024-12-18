@@ -1,114 +1,20 @@
 /* Estilos gerais */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7; /* Cor de fundo suave */
+    background-color: #f4f4f9; /* Cor de fundo suave, mantendo a consistência */
 }
 
 header {
-    background-color: #007BFF; /* Cor agradável para o cabeçalho */
-    color: white;
-    padding: 20px 0;
     text-align: center;
+    padding: 20px;
+    background-color: #1d3557; /* Cor de fundo similar ao cabeçalho anterior */
+    color: white;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin: 0;
-}
-
-/* Container do conteúdo */
+/* Container principal da página de detalhes */
 .container {
     display: flex;
     max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 30px;
-}
-
-/* Imagem do cartão */
-.cartao-imagem {
-    width: 250px; /* Tamanho da imagem */
-    height: auto;
-    border-radius: 8px; /* Bordas arredondadas */
-}
-
-/* Detalhes do cartão */
-.detalhes {
-    color: #333;
-}
-
-h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-p {
-    font-size: 1.1rem;
-    margin: 8px 0;
-    line-height: 1.6;
-}
-
-strong {
-    font-weight: bold;
-    color: #007BFF; /* Cor de destaque */
-}
-
-#descricaoCartao {
-    font-size: 1rem;
-    color: #777;
-    margin-top: 20px;
-}
-
-/* Botão de Compra */
-.btn-comprar {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 12px 25px;
-    background-color: #28a745;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 8px;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-.btn-comprar:hover {
-    background-color: #218838;
-}
-
-.btn-comprar:active {
-    background-color: #1c7d31;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .cartao-imagem {
-        width: 100%;
-        max-width: 350px; /* Imagem maior para telas pequenas */
-    }
-
-    .detalhes {
-        text-align: center;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-}
+    margin: 40
