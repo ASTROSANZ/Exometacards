@@ -7,11 +7,10 @@ body {
 }
 
 header {
-    background-color: #4CAF50; /* Cor mais agradável */
+    background-color: #007BFF; /* Cor agradável para o cabeçalho */
     color: white;
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para o cabeçalho */
 }
 
 h1 {
@@ -19,45 +18,33 @@ h1 {
     margin: 0;
 }
 
-/* Container principal */
+/* Container do conteúdo */
 .container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
     padding: 20px;
-    max-width: 900px;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    justify-content: flex-start;
+    align-items: center;
     gap: 30px;
-    transition: all 0.3s ease;
-}
-
-.container:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Efeito ao passar o mouse */
 }
 
 /* Imagem do cartão */
 .cartao-imagem {
-    width: 250px; /* Tamanho adequado */
+    width: 250px; /* Tamanho da imagem */
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor da imagem */
+    border-radius: 8px; /* Bordas arredondadas */
 }
 
 /* Detalhes do cartão */
 .detalhes {
-    flex: 1;
     color: #333;
-    padding-left: 20px;
 }
 
 h2 {
     font-size: 2rem;
     color: #333;
-    margin-bottom: 10px;
-    font-weight: 600;
+    margin-bottom: 15px;
 }
 
 p {
@@ -67,8 +54,8 @@ p {
 }
 
 strong {
-    font-weight: 600;
-    color: #4CAF50; /* Cor de destaque */
+    font-weight: bold;
+    color: #007BFF; /* Cor de destaque */
 }
 
 #descricaoCartao {
@@ -82,7 +69,7 @@ strong {
     display: inline-block;
     margin-top: 30px;
     padding: 12px 25px;
-    background-color: #28a745; /* Cor de fundo mais agradável */
+    background-color: #28a745;
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -93,28 +80,27 @@ strong {
 }
 
 .btn-comprar:hover {
-    background-color: #218838; /* Cor do botão ao passar o mouse */
+    background-color: #218838;
 }
 
 .btn-comprar:active {
-    background-color: #1c7d31; /* Cor ao clicar no botão */
+    background-color: #1c7d31;
 }
 
-/* Responsividade para telas pequenas */
+/* Responsividade */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        padding: 20px;
         gap: 20px;
+        padding: 20px;
     }
 
     .cartao-imagem {
         width: 100%;
-        max-width: 300px;
+        max-width: 350px; /* Imagem maior para telas pequenas */
     }
 
     .detalhes {
-        padding-left: 0;
         text-align: center;
     }
 
