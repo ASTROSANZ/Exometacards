@@ -13,7 +13,7 @@
     </header>
 
     <div class="card-detail">
-        <img id="imagens" src="" alt="imagens">
+        <img id="cartaoImagem" src="" alt="Imagem do Cartão">
         <div class="info">
             <h2 id="nomeCartao"></h2>
             <p><strong>Limite:</strong> R$<span id="limiteCartao"></span></p>
@@ -26,15 +26,18 @@
     <script>
         // Captura os parâmetros da URL
         const params = new URLSearchParams(window.location.search);
-        const nome = params.get("nome");
+        const id = params.get("id");  // Pega o número do cartão (1, 2, 3, etc.)
         const limite = params.get("limite");
         const valor = params.get("valor");
 
         // Preenche as informações na página
-        document.getElementById("nomeCartao").innerText = nome;
+        const nomeCartao = `Cartão ${id}`; // Nome dinâmico, exemplo: Cartão 1, Cartão 2, etc.
+        document.getElementById("nomeCartao").innerText = nomeCartao;
         document.getElementById("limiteCartao").innerText = limite;
         document.getElementById("valorCartao").innerText = valor;
-        document.getElementById("cartaoImagem").src = "imagens/" + nome.toLowerCase().replace(/\s+/g, '') + ".png"; // Altera a imagem baseada no nome do cartão
+
+        // Define a imagem baseada no ID do cartão
+        document.getElementById("cartaoImagem").src = `imagens/cartao${id}.png`;  // Carrega a imagem dinamicamente
 
         // Adiciona evento ao botão de compra
         document.getElementById("comprarBtn").addEventListener("click", function() {
