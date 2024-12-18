@@ -28,19 +28,19 @@
     <script>
         // Captura os parâmetros da URL
         const params = new URLSearchParams(window.location.search);
-        const id = params.get("id");  // Pega o número do cartão (1, 2, 3, etc.)
-        const limite = params.get("limite");
-        const valor = params.get("valor");
+        const id = params.get("id");       // ID do cartão (1, 2, 3, etc.)
+        const nome = params.get("nome");   // Nome do cartão
+        const limite = params.get("limite"); // Limite do cartão
+        const valor = params.get("valor");   // Valor do cartão
 
         // Preenche as informações na página
-        const nomeCartao = `Cartão ${id}`; // Nome dinâmico, exemplo: Cartão 1, Cartão 2, etc.
-        document.getElementById("nomeCartao").innerText = nomeCartao;
+        document.getElementById("nomeCartao").innerText = nome;
         document.getElementById("limiteCartao").innerText = limite;
         document.getElementById("valorCartao").innerText = valor;
 
         // Define a imagem baseada no ID do cartão
         const cartaoImagem = document.getElementById("cartaoImagem");
-        cartaoImagem.src = `imagens/cartao${id}.png`;  // Carrega a imagem dinamicamente
+        cartaoImagem.src = `imagens/cartao${id}.png`;  // Exemplo: imagens/cartao1.png
 
         // Adiciona evento ao botão de compra
         document.getElementById("comprarBtn").addEventListener("click", function() {
