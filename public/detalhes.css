@@ -1,0 +1,84 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagem do cartão */
+.cartao-imagem {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Detalhes do cartão */
+.detalhes {
+    flex: 1;
+    color: #333;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Botão de Compra */
+.btn-comprar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+}
+
+.btn-comprar:hover {
+    background-color: #218838;
+}
+
+/* Estilo da descrição */
+#descricaoCartao {
+    font-size: 14px;
+    color: #777;
+}
