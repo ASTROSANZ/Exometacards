@@ -4,7 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes do Cartão</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .container img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .details {
+            flex: 1;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        h2 {
+            margin: 0 0 10px;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        .btn-comprar {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn-comprar:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
 
@@ -12,16 +70,19 @@
         <h1>Detalhes do Cartão</h1>
     </header>
 
-    <div class="card-detail">
-        <!-- Imagem do cartão (será carregada dinamicamente) -->
+    <div class="container">
+        <!-- Imagem do cartão -->
         <img id="cartaoImagem" src="" alt="Imagem do Cartão" />
-        
-        <div class="info">
+
+        <!-- Detalhes do cartão -->
+        <div class="details">
             <h2 id="nomeCartao"></h2>
             <p><strong>Limite:</strong> R$<span id="limiteCartao"></span></p>
             <p><strong>Valor:</strong> R$<span id="valorCartao"></span></p>
-            <p id="descricaoCartao">Aqui pode ter uma descrição mais detalhada sobre o cartão, seus benefícios, etc.</p>
-            <button id="comprarBtn">Comprar</button>
+            <p id="descricaoCartao">
+                Este cartão oferece benefícios exclusivos e foi criado para atender suas necessidades. Após o pagamento via Pix, será liberado imediatamente.
+            </p>
+            <a href="#" class="btn-comprar" id="comprarBtn">Comprar Agora</a>
         </div>
     </div>
 
@@ -44,7 +105,7 @@
 
         // Adiciona evento ao botão de compra
         document.getElementById("comprarBtn").addEventListener("click", function() {
-            alert("Compra realizada com sucesso!"); // Aqui você pode adicionar a lógica para finalizar a compra
+            alert("Compra realizada com sucesso!"); // Aqui você pode adicionar lógica para finalizar a compra
         });
     </script>
 
