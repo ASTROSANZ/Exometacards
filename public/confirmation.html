@@ -26,6 +26,7 @@
                 <li>Insira a chave Pix acima.</li>
                 <li>Confirme o valor a ser pago.</li>
                 <li><b>Finalize o pagamento e será redirecionado para outra página com as informações do cartão.</b></li>
+            </ol>
         </div>
 
         <div class="thank-you">
@@ -38,6 +39,21 @@
         <p>Se você tiver qualquer dúvida, entre em contato.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Obtém o valor do cartão a partir da URL
+        const params = new URLSearchParams(window.location.search);
+        const valorCartao = params.get("value");
+
+        // Exibe o valor do cartão na página
+        document.getElementById("valor-cartao").textContent = valorCartao || "0.00";
+
+        // Função para copiar a chave Pix
+        function copiarChavePix() {
+            const chavePix = document.getElementById("pix-key").textContent;
+            navigator.clipboard.writeText(chavePix).then(() => {
+                alert("Chave Pix copiada para a área de transferência!");
+            });
+        }
+    </script>
 </body>
 </html>
