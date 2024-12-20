@@ -18,8 +18,8 @@
             </div>
             <div class="card-info">
                 <h2 id="card-name">Nome do Cartão</h2>
-                <p><strong>Limite:</strong> <span id="card-limit">R$ 0,00</span></p>
-                <p><strong>Valor:</strong> R$ <span id="card-value">0.00</span></p>
+                <p><strong>Limite:</strong> <span id="card-limit"></span></p>
+                <p><strong>Valor:</strong> R$ <span id="card-value"></span></p>
                 <button id="comprarBtn">Comprar</button>
             </div>
         </div>
@@ -34,14 +34,14 @@
         const cardImg = params.get("img");
 
         // Define os valores dinâmicos na página
-        document.getElementById("card-name").textContent = cardName;
-        document.getElementById("card-limit").textContent = `R$ ${cardLimit}`;
-        document.getElementById("card-value").textContent = cardValue;
-        document.getElementById("card-img").src = cardImg;
+        document.getElementById("card-name").textContent = cardName || "Cartão não especificado";
+        document.getElementById("card-limit").textContent = cardLimit ? `R$ ${cardLimit}` : "Indisponível";
+        document.getElementById("card-value").textContent = cardValue || "0.00";
+        document.getElementById("card-img").src = cardImg || "imagens/default.png";
 
-        // Redireciona para a página de confirmação ao clicar em "Comprar"
+        // Botão para redirecionar para a página de confirmação
         document.getElementById("comprarBtn").addEventListener("click", function () {
-            window.location.href = `confirmacao.html?value=${cardValue}`;
+            window.location.href = `confirmation.html?value=${cardValue}`;
         });
     </script>
 </body>
