@@ -34,14 +34,14 @@
         const cardImg = params.get("img");
 
         // Define os valores dinâmicos na página
-        document.getElementById("card-name").textContent = cardName || "Cartão não especificado";
-        document.getElementById("card-limit").textContent = cardLimit ? `R$ ${cardLimit}` : "Indisponível";
-        document.getElementById("card-value").textContent = cardValue || "0.00";
-        document.getElementById("card-img").src = cardImg || "imagens/default.png";
+        document.getElementById("card-name").textContent = cardName;
+        document.getElementById("card-limit").textContent = `R$ ${cardLimit}`;
+        document.getElementById("card-value").textContent = cardValue;
+        document.getElementById("card-img").src = cardImg;
 
         // Redireciona para a página de confirmação ao clicar em "Comprar"
         document.getElementById("comprarBtn").addEventListener("click", function () {
-            window.location.href = `confirmation.html?value=${cardValue}`;
+            window.location.href = `confirmacao.html?value=${cardValue}`;
         });
     </script>
 </body>
