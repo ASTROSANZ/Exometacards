@@ -3,55 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagar com Pix</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Confirmação de Pagamento</title>
+    <link rel="stylesheet" href="confirmation.css">
 </head>
 <body>
     <header>
-        <h1>Pagar com Pix</h1>
-        <p>Por favor, siga as instruções abaixo para concluir sua compra.</p>
+        <h1>Pagamento com Pix</h1>
     </header>
     
-    <section class="payment-info">
-        <h2>Detalhes do Pagamento</h2>
-        <p>Valor a Pagar: R$ <span id="valor-cartao"></span></p>
-        <p>Chave Pix: <strong id="pix-key">0cfbde45-69d8-4ba8-8c18-8cbe74f9d39f</strong>
-        <button onclick="copiarChavePix()">Copiar</button></p>
+    <main>
+        <section class="payment-info">
+            <h2>Detalhes do Pagamento</h2>
+            <p>Valor a Pagar: R$ <span id="valor-cartao">0.00</span></p>
+            <p>Chave Pix: <strong id="pix-key">0cfbde45-69d8-4ba8-8c18-8cbe74f9d39f</strong></p>
+            <button onclick="copiarChavePix()">Copiar Chave Pix</button>
 
-        <div class="instructions">
-            <h3>Instruções</h3>
-            <ol>
-                <li>Abra seu aplicativo bancário.</li>
-                <li>Selecione a opção de pagamento via Pix.</li>
-                <li>Insira a chave Pix acima.</li>
-                <li>Confirme o valor a ser pago.</li>
-                <li><b>Finalize o pagamento e será redirecionado para outra página com as informações do cartão.</b></li>
-            </ol>
-        </div>
-
-        <div class="thank-you">
-            <h3>Obrigado por sua compra!</h3>
-            <p>Se tiver dúvidas, entre em contato conosco.</p>
-        </div>
-    </section>
+            <div class="instructions">
+                <h3>Instruções</h3>
+                <ol>
+                    <li>Abra seu aplicativo bancário.</li>
+                    <li>Selecione a opção de pagamento via Pix.</li>
+                    <li>Insira a chave Pix acima.</li>
+                    <li>Confirme o valor exibido.</li>
+                    <li>Finalize o pagamento para liberar seu cartão.</li>
+                </ol>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>Se você tiver qualquer dúvida, entre em contato.</p>
+        <p>Obrigado por sua compra!</p>
     </footer>
 
     <script>
-        // Obtém o valor do cartão a partir da URL
+        // Obtém o valor do cartão da URL
         const params = new URLSearchParams(window.location.search);
-        const valorCartao = params.get("value");
+        const cardValue = params.get("value");
 
-        // Exibe o valor do cartão na página
-        document.getElementById("valor-cartao").textContent = valorCartao || "0.00";
+        // Exibe o valor na página
+        document.getElementById("valor-cartao").textContent = cardValue || "0.00";
 
         // Função para copiar a chave Pix
         function copiarChavePix() {
-            const chavePix = document.getElementById("pix-key").textContent;
-            navigator.clipboard.writeText(chavePix).then(() => {
-                alert("Chave Pix copiada para a área de transferência!");
+            const chave = document.getElementById("pix-key").textContent;
+            navigator.clipboard.writeText(chave).then(() => {
+                alert("Chave Pix copiada!");
             });
         }
     </script>
