@@ -111,9 +111,9 @@
         document.getElementById("card-value").textContent = cardValue || "0.00";
         document.getElementById("card-img").src = cardImg || "imagens/default.png";
 
-        // Botão para redirecionar para a página de confirmação
+        // Botão para redirecionar para a página de pagamento
         document.getElementById("comprarBtn").addEventListener("click", function () {
-            window.location.href = `confirmation.html?value=${cardValue}`;
+            window.location.href = `payment.html?value=${cardValue}`;
         });
     </script>
 </body>
