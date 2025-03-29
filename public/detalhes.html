@@ -4,79 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes do Cartão</title>
-    <style>
-        /* CSS embutido */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #007BFF;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-        }
-
-        main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .card-details {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
-        }
-
-        .card-image img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-
-        .card-info {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .card-info h2 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .card-info p {
-            margin: 5px 0;
-            font-size: 1rem;
-            color: #555;
-        }
-
-        button {
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 20px;
-            font-size: 1rem;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="detalhes.css"> <!-- Referência ao CSS externo -->
 </head>
 <body>
     <header>
@@ -111,9 +39,9 @@
         document.getElementById("card-value").textContent = cardValue || "0.00";
         document.getElementById("card-img").src = cardImg || "imagens/default.png";
 
-        // Botão para redirecionar para a página de pagamento
+        // Botão para redirecionar para a página de confirmação
         document.getElementById("comprarBtn").addEventListener("click", function () {
-            window.location.href = `payment.html?value=${cardValue}`;
+            window.location.href = `confirmation.html?value=${cardValue}`; // Mudança para confirmation.html
         });
     </script>
 </body>
