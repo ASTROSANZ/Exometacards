@@ -207,3 +207,62 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header .logo {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .banner h1 {
+        font-size: 35px;
+    }
+
+    .banner p {
+        font-size: 18px;
+    }
+
+    .produtos .grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .produtos h2 {
+        font-size: 28px;
+    }
+
+    .produtos .produto {
+        padding: 15px;
+    }
+
+    .produtos .produto h3 {
+        font-size: 20px;
+    }
+
+    .produtos .produto p {
+        font-size: 16px;
+    }
+
+    .contato h2 {
+        font-size: 28px;
+    }
+
+    .contato p {
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
